@@ -68,12 +68,13 @@ WSGI_APPLICATION = "backend.wsgi.application"
 
 # --- DATABASE CONFIGURATION (Pour Render) ---
 # On lit les identifiants depuis les variables d'environnement de Render
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": os.environ.get('DB_NAME', 'talenthub_r'),
         "USER": os.environ.get('DB_USER', 'dieng0204'),
-        "PASSWORD": os.environ.get('DB_PASSWORD', ''),
+        "PASSWORD": os.environ.get('DB_PASSWORD', 'DiLrZC700hrOr175Dbf1HgGXurW2SPmN'),
         "HOST": os.environ.get('DB_HOST', 'dpg-d9of723ncjis73btt6gg-a'),
         "PORT": os.environ.get('DB_PORT', '5432'),
     }

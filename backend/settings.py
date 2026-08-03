@@ -71,10 +71,10 @@ WSGI_APPLICATION = "backend.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ.get('DB_NAME', 'TalentHub-R'),
-        "USER": os.environ.get('DB_USER', 'postgres'),
-        "PASSWORD": os.environ.get('DB_PASSWORD', 'a7832140'),
-        "HOST": os.environ.get('DB_HOST', 'dpg-d9of723ncjis73btt6gg-a'), 
+        "NAME": os.environ.get('DB_NAME', 'talenthub_r'),
+        "USER": os.environ.get('DB_USER', 'dieng0204'),
+        "PASSWORD": os.environ.get('DB_PASSWORD', ''),
+        "HOST": os.environ.get('DB_HOST', 'dpg-d9of723ncjis73btt6gg-a'),
         "PORT": os.environ.get('DB_PORT', '5432'),
     }
 }

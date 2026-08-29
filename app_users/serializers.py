@@ -662,3 +662,29 @@ class NotificationSerializer(serializers.ModelSerializer):
             "dateEnvoi",
             "destinataire",
         ]
+
+from rest_framework import serializers
+
+from .models import Entreprise
+
+
+class MesEntrepriseSerializer(
+    serializers.ModelSerializer
+):
+
+    class Meta:
+
+        model = Entreprise
+
+        fields = [
+            "id",
+            "nom",
+            "secteur",
+            "adresse",
+            "telephone",
+            "email",
+            "siteweb",
+            "logo",
+            "statut",
+            "verifiee"
+        ]

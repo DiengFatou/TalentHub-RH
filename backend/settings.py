@@ -26,10 +26,9 @@ SECRET_KEY = "django-insecure-mu)%%nysl%+2nsm=6!5sx!q!_8&@t0z!98sc(71dyz3s760s-4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
-# Application definition
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -44,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     "app_offres",
     'app_candidatures',
+    'app_missions',
     'corsheaders',
 ]
 
@@ -82,13 +82,13 @@ WSGI_APPLICATION = "backend.wsgi.application"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'TalentHub-R',
-        'USER': 'postgres',
-        'PASSWORD': 'a7832140',
-        'HOST': 'localhost',
-        'PORT': '5432',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.environ.get('DB_NAME', 'talenthub_r'),
+        "USER": os.environ.get('DB_USER', 'dieng0204'),
+        "PASSWORD": os.environ.get('DB_PASSWORD', ''),
+        "HOST": os.environ.get('DB_HOST', 'localhost'),
+        "PORT": os.environ.get('DB_PORT', '5432'),
     }
 }
 
@@ -155,5 +155,5 @@ SIMPLE_JWT = {
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",
-   
+    "https://talenthub-front.vercel.app", 
 ]
